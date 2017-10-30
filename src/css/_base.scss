@@ -1,0 +1,40 @@
+
+// --------------------------------------------------------------
+// Base reset
+// --------------------------------------------------------------
+
+* {
+	margin: 0; 
+	padding: 0;
+}
+
+html {
+	font-family: sans-serif, arial;
+	font-size: $base-font-size; 
+	line-height: $base-line-height; 
+	text-align: left;
+    text-rendering: optimizeLegibility;
+    text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: $color-text; 
+}
+
+html, 
+body {
+	height: 100%; 
+	width: 100%;
+	// background-color: $color-bg;
+}
+
+
+#content {
+	background-color: $color-white;
+}
+
+.container {
+	padding: 0 1rem; 
+	margin: 0 auto; 
+	max-width: 64rem;
+	height: 100%; 
+}

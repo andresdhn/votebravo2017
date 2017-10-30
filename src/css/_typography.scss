@@ -1,0 +1,137 @@
+
+// --------------------------------------------------------------
+// Typography
+// --------------------------------------------------------------
+
+// Fonts
+// --------------------------------------------------------------
+
+@each $font-face in  'RobotoCondensed-Regular', 'RobotoCondensed-Bold', 'RobotoCondensed-BoldItalic', 
+	'RobotoCondensed-Italic', 'RobotoCondensed-Light', 'RobotoCondensed-LightItalic' {
+	@font-face {
+		font-family: $font-face; font-style: normal; font-weight: normal; 
+		src: url('../fonts/#{$font-face}.ttf');
+        src: url('../fonts/#{$font-face}.ttf?')  format('truetype'); 
+	}
+}
+	
+$font-stack: Impact, "Franklin Gothic Bold", sans-serif;
+
+$font-regular: join(RobotoCondensed-Regular, $font-stack); 
+$font-bold: join(RobotoCondensed-Bold, $font-stack); 
+$font-boldItalic: join(RobotoCondensed-BoldItalic, $font-stack); 
+$font-italic: join(RobotoCondensed-Italic, $font-stack); 
+$font-light: join(RobotoCondensed-Light, $font-stack); 
+$font-lightItalic: join(RobotoCondensed-LightItalic, $font-stack); 
+
+// Headings
+// --------------------------------------------------------------
+h1,h2,h3,
+h4,h5,h6 {
+	font-family: $font-light; 
+	font-size: $size-Lg;
+	line-height: 0.8;
+	
+	&.bold,
+	strong {
+		font-family: $font-lightItalic;
+	}
+
+	em, 
+	&.cursive {
+		font-family: $font-boldItalic;
+	}
+}
+
+
+// Paragraph
+// --------------------------------------------------------------
+a, p, li,  
+td, th, 
+span, label{
+	font-family: $font-light; 
+	margin-bottom: 5px; 
+
+	&.bold,
+	strong {
+		font-family: $font-bold;
+	}
+
+	em, 
+	.cursive {
+		font-family: $font-lightItalic;
+	}
+}
+
+blockquote{
+	font-family: $font-italic; 
+	
+	&.bold,
+	strong {
+		font-family: $font-boldItalic;
+	}
+}
+
+sub,
+sup {
+	font-size: 75%;
+    line-height: inherit;
+    position: relative;
+    top: -0.5em;
+}
+
+// Anchor
+// --------------------------------------------------------------
+
+a {
+	text-decoration: none; 
+	color: inherit;
+
+	&:active, 
+	&:focus, 
+	&:hover {
+		outline: 0 !important;
+	}
+}
+
+// Lists
+// --------------------------------------------------------------
+ul:not(.nav):not(.dropdown-menu):not(.list-group) {
+	list-style-type: none; 
+    margin-left: $space; 
+    
+    li:before {
+        content: "";
+        position:relative;
+        left: -8px;
+        margin-left: -6px;
+        margin-bottom: 2px;
+        background-color: $color-text;
+
+        display:inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius:50%
+    }
+
+    ul li:before{
+        content: "";
+        position:relative;
+        left: -10px;
+        background-color: $color-text;
+
+        display:inline-block;
+        width:5px;
+        height:1px;
+    }
+}
+
+ol {
+	margin-left: $space; 
+	list-style-type: decimal;
+
+	li:before {
+		margin-left: 2px; 
+		padding: 0;
+	}
+}

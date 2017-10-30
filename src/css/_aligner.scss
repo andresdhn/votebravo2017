@@ -1,0 +1,18 @@
+
+// --------------------------------------------------------------
+// Aligner
+// --------------------------------------------------------------
+
+.align {
+  	display: flex;
+  	align-items: center;
+
+	&.align--center 	{ justify-content: center; }
+	&.align--left 		{ justify-content: flex-start; }
+	&.align--right 		{ justify-content: flex-end; }
+
+	.align-item--top 	{ align-self: flex-start; }
+	.align-item--bottom { align-self: flex-end; }
+
+	.align-item--right 	{ margin-left: auto; }
+}

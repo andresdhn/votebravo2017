@@ -1,9 +1,8 @@
 /* 
  * =====================================================================
  *
- * votebravo.com.au
+ * Votebravo.com.au
  * styles.css
- * Styles guide for this eDetailer
  * Novemeber 2017
  * @author:  Andres Hernandez <andres.hernandez@ward6.com.au>
  * @copyright: Ward6 PTY LTD
@@ -11,11 +10,27 @@
  * =====================================================================
  */
 
-// Dependencies
+// Settings
 @import 'settings'; 
 @import 'mixins'; 
 
+// Dependencies
+@import 'include-media';
+@import 'include-media-grid';
+@import 'grid';
+
+// Base styles
+@import 'reset'; 
+@import 'base'; 
+@import 'typography'; 
+
+// Components
+@import 'topbar';
+@import 'nav';
+@import 'button';
+
 // Helpers
 @import 'spacers'; 
+@import 'aligner'; 
 
 

@@ -1,0 +1,187 @@
+@charset 'UTF-8';
+
+/*
+    Grid class name
+*/
+$im-grid-class: 'grid' !default;
+
+/*
+    Cell class name
+*/
+$im-grid-cell-class: 'grid-cell' !default;
+
+/*
+    Gutter size
+*/
+$im-grid-gutter-size: 20px !default;
+
+/*
+    Optionally include max-width to fix IE issues
+*/
+$im-grid-include-max-width: false !default;
+
+/*
+    Grid
+*/
+.#{$im-grid-class} {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    Grid cell
+*/
+.#{$im-grid-cell-class},
+.#{$im-grid-class}--auto > * {
+    flex: 1;
+    flex-grow: 4;
+}
+
+/*
+    Grid cell modifiers
+ */
+.#{$im-grid-cell-class}--auto-size {
+    flex: none;
+}
+
+.#{$im-grid-cell-class}--light {
+    flex-grow: 2;
+}
+
+.#{$im-grid-cell-class}--heavy {
+    flex-grow: 8;
+}
+
+/*
+    Grid gutters
+*/
+.#{$im-grid-class}--gutters {
+    margin: (-$im-grid-gutter-size) 0 0 (-$im-grid-gutter-size);
+}
+.#{$im-grid-class}--gutters > .#{$im-grid-cell-class},
+.#{$im-grid-class}--auto.#{$im-grid-class}--gutters > * {
+    padding: $im-grid-gutter-size 0 0 $im-grid-gutter-size;
+    box-sizing: border-box;
+}
+
+/*
+    Alignment per row
+*/
+.#{$im-grid-class}--top {
+    align-items: flex-start;
+}
+.#{$im-grid-class}--bottom {
+    align-items: flex-end;
+}
+.#{$im-grid-class}--center {
+    align-items: center;
+}
+
+/*
+    Flexible cells
+*/
+.#{$im-grid-class}--flex-grid-cell > .#{$im-grid-cell-class}, // Older selector kept for backwards compatability.
+.#{$im-grid-class}--flex > .#{$im-grid-cell-class} {
+    display: flex;
+}
+
+/*
+    Justify
+*/
+.#{$im-grid-class}--justify-center {
+    justify-content: center;
+}
+.#{$im-grid-class}--justify-start {
+    justify-content: flex-start;
+}
+.#{$im-grid-class}--justify-end {
+    justify-content: flex-end;
+}
+
+/*
+    Alignment per cell
+*/
+.#{$im-grid-cell-class}--top {
+    align-self: flex-start;
+}
+.#{$im-grid-cell-class}--bottom {
+    align-self: flex-end;
+}
+.#{$im-grid-cell-class}--center {
+    align-self: center;
+}
+
+/*
+    Generate grid classes
+*/
+@mixin im-grid-columns($columns...) {
+    @each $i in $columns {
+        @for $n from 1 through $i {
+            .#{$im-grid-class}--fit > .#{$im-grid-cell-class} {
+                flex: 1;
+            }
+            .#{$im-grid-class}--full > .#{$im-grid-cell-class} {
+                flex: 0 0 100%;
+            }
+
+            .#{$im-grid-class}--#{$n}-#{$i} > .#{$im-grid-cell-class}:not([class*='#{$im-grid-cell-class}--']) {
+                flex: 0 0 (($n / $i) * 100%);
+                @if $im-grid-include-max-width
+                { max-width: (($n / $i) * 100%); }
+            }
+
+            .#{$im-grid-class} > .#{$im-grid-cell-class}.#{$im-grid-cell-class}--#{$n}-#{$i} {
+
+                flex: 0 0 (($n / $i) * 100%) !important;
+                @if $im-grid-include-max-width
+                { max-width: (($n / $i) * 100%) !important; }
+            }
+        }
+
+        .#{$im-grid-class}--auto-#{$i} > * {
+            flex: 0 0 ((1 / $i) * 100%) !important;
+            @if $im-grid-include-max-width
+            { max-width: ((1 / $i) * 100%) !important; }
+        }
+    }
+
+    @each $breakpoint in $breakpoints {
+        $breakpoint-name: nth($breakpoint, 1);
+
+        @include media(#{'>=' + $breakpoint-name}) {
+            @each $i in $columns {
+                @for $n from 1 through $i {
+                    .#{$im-grid-class}--fit\@#{$breakpoint-name} > .#{$im-grid-cell-class} {
+                        flex: 1;
+                    }
+                    .#{$im-grid-class}--full\@#{$breakpoint-name} > .#{$im-grid-cell-class} {
+                        flex: 0 0 100%;
+                    }
+
+                    .#{$im-grid-class}--#{$n}-#{$i}\@#{$breakpoint-name} > .#{$im-grid-cell-class}:not([class*='#{$im-grid-cell-class}--']) {
+
+                        flex: 0 0 (($n / $i) * 100%);
+                        @if $im-grid-include-max-width
+                        { max-width: (($n / $i) * 100%); }
+                    }
+
+                    .#{$im-grid-class} > .#{$im-grid-cell-class}.#{$im-grid-cell-class}--#{$n}-#{$i}\@#{$breakpoint-name} {
+
+                        flex: 0 0 (($n / $i) * 100%) !important;
+                        @if $im-grid-include-max-width
+                        { max-width: (($n / $i) * 100%) !important; }
+                    }
+                }
+
+                .#{$im-grid-class}--auto-#{$i}\@#{$breakpoint-name} > * {
+                    flex: 0 0 ((1 / $i) * 100%) !important;
+                    @if $im-grid-include-max-width
+                    { max-width: ((1 / $i) * 100%) !important; }
+                }
+            }
+        }
+    }
+}

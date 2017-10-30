@@ -22,7 +22,9 @@ var inputRoot = './src';
 
 var input = {
 	html: inputRoot + '/html/pages/*.html',
-	sass: inputRoot + '/**/*.scss'
+	sass: inputRoot + '/**/*.scss', 
+	copy: inputRoot + '/**/*.{png,jpg,gif}', 
+	vend: './vendor/**/*.*'
 }
 
 var output = {
@@ -76,18 +78,39 @@ gulp.task('sass', function() {
 }); 
 
 // --------------------------------------------------------------
-// Watch
+// Copy
 // --------------------------------------------------------------
 
-gulp.task('watch', function () {
-	gulp.watch(input.sass , ['sass']); 
-	gulp.watch([inputRoot + '/html/{layouts,partials,helpers,data}/**/*'] , [panini.refresh]); 
+gulp.task('copy', function() {
+
+	return gulp
+		.src(input.copy)
+		.pipe(gulp.dest(output.build)); 
+}); 
+
+// --------------------------------------------------------------
+// Vendor
+// --------------------------------------------------------------
+
+gulp.task('vendor', function() {
+
+	return gulp
+		.src(input.vend)
+		.pipe(gulp.dest(output.build)); 
 }); 
 
 // --------------------------------------------------------------
 // Default
 // --------------------------------------------------------------
 
-gulp.task('default', function(){
-	console.log('working'); 
-})
+gulp.task('default', ['sass', 'html', 'copy', 'vendor']); 
+
+// --------------------------------------------------------------
+// Watch
+// --------------------------------------------------------------
+
+gulp.task('watch', function () {
+	gulp.watch(input.sass , ['sass']); 
+	gulp.watch(input.copy , ['copy']); 
+	gulp.watch([inputRoot + '/html/{layouts,partials,helpers,data}/**/*'] , [panini.refresh]); 
+}); 

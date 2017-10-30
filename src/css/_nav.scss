@@ -1,0 +1,20 @@
+
+// --------------------------------------------------------------
+// Nav
+// --------------------------------------------------------------
+
+.nav {
+	list-style-type: none;
+
+	li {
+		display: inline-block; 
+		margin-right: 1em;
+	}
+
+	&.nav--top {
+		.nav__link {
+			font-family: $font-regular; 
+			color: $color-white;
+		}
+	}
+}
