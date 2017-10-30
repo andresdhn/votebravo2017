@@ -29,6 +29,8 @@ $size-Lg: $base-font-size + 3;
 // --------------------------------------------------------------
 $space: ($base-font-size * $base-line-height);
 
+$container-width: 1024px; 
+
 
 // Breakpoint Map for @include Media
 // --------------------------------------------------------------
@@ -39,3 +41,8 @@ $breakpoints: (
 	lg: 1024px, 
 	xl: 1700px
 );
+
+
+// Z-index order
+// --------------------------------------------------------------
+$zindex-topbar: 99;  

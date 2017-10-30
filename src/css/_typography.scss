@@ -30,7 +30,8 @@ h1,h2,h3,
 h4,h5,h6 {
 	font-family: $font-light; 
 	font-size: $size-Lg;
-	line-height: 0.8;
+	letter-spacing: 5px; 
+	text-transform: uppercase; 
 	
 	&.bold,
 	strong {
@@ -43,7 +44,6 @@ h4,h5,h6 {
 	}
 }
 
-
 // Paragraph
 // --------------------------------------------------------------
 a, p, li,  
@@ -51,6 +51,7 @@ td, th,
 span, label{
 	font-family: $font-light; 
 	margin-bottom: 5px; 
+	letter-spacing: 2px; 
 
 	&.bold,
 	strong {

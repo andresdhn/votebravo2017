@@ -4,9 +4,10 @@
 // --------------------------------------------------------------
 
 #topbar {
-    position: fixed; 
+    position: relative; 
     height: 4.5rem;
     width: 100%;
+    z-index: $zindex-topbar; 
     
    	background-color: $color-brand; 
 }
@@ -21,7 +22,7 @@
 		width: 80px; 
 		height: 34px; 
 		margin-right: 1em; 
-		background: url('../img/logo.png') no-repeat left center; 
+		background: url('../img/bravo_logo_white_sm.png') no-repeat left center; 
 	}
 
 	.nav {

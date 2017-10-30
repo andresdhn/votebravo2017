@@ -27,14 +27,9 @@ body {
 	// background-color: $color-bg;
 }
 
-
-#content {
-	background-color: $color-white;
-}
-
 .container {
 	padding: 0 1rem; 
 	margin: 0 auto; 
-	max-width: 64rem;
+	max-width: $container-width;
 	height: 100%; 
 }

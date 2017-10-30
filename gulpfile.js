@@ -112,5 +112,5 @@ gulp.task('default', ['sass', 'html', 'copy', 'vendor']);
 gulp.task('watch', function () {
 	gulp.watch(input.sass , ['sass']); 
 	gulp.watch(input.copy , ['copy']); 
-	gulp.watch([inputRoot + '/html/{layouts,partials,helpers,data}/**/*'] , [panini.refresh]); 
+	gulp.watch([inputRoot + '/html/{layouts,partials,pages}/**/*'] , [panini.refresh]); 
 }); 

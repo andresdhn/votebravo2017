@@ -1,0 +1,66 @@
+
+// --------------------------------------------------------------
+// Hero
+// --------------------------------------------------------------
+
+// Aspect ratio
+// --------------------------------------------------------------
+$ratio-4by1:	25%;
+$ratio-3by1:	33.33333333333333%;
+$ratio-2by1:	50%;
+$ratio-16by9:	56.25%;
+$ratio-3by2:	66.66666666666667%;
+$ratio-4by3:	75%;
+$ratio-full:	100%;
+
+
+#hero {
+	position: relative; 
+	width: 100%; 
+	height: auto; 
+	padding-bottom: $ratio-16by9; 
+
+	background-color: $color-bg;
+	background-repeat: no-repeat; 
+	background-position: center center; 
+	background-size: cover; 
+	background-image: url('../img/hero_bg_retina.jpg'); 
+
+
+	video {
+	    bottom: 0;
+	    height: 100%;
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    width: auto;
+	    z-index: 0;
+
+	    &::-webkit-media-controls-start-playback-button {
+	        display: none !important;
+	        -webkit-appearance: none;
+	    }
+	}
+}
+
+.hero__content {
+	position: absolute; 
+	top: 50%; 
+	width: 100%; 
+	transform: translateY(-50%);
+
+	.container {
+		width: 166px;
+	}
+
+	.hero__logo {
+		width: 166px; 
+		margin-bottom: 1rem;
+	}
+
+	.hero__title {
+		font-family: $font-light; 
+		color: $color-white; 
+		text-align: left; 
+	}
+}	
