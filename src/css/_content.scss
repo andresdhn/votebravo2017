@@ -11,3 +11,21 @@
 		margin-bottom: 3rem; 	
 	}
 }
+
+.finalist {
+	margin-bottom: 2rem; 
+	
+	.finalist__thumb {
+		margin-bottom: 1rem;
+	}
+
+	.finalist__title,
+	.finalist__name {
+		text-align: left;
+	}
+
+	.finalist__title{
+		font-family: $font-bold;
+		text-transform: uppercase; 
+	}
+}

@@ -29,12 +29,20 @@
 			margin: 1em;
 		}
 
-
 		text-align: center; 
 		border-bottom: 1px solid rgba($color-text, 0.5);
 
 		.nav__link {
 			margin-bottom: 1em;
+			border-bottom: 1px solid transparent; 
+			padding-bottom: 1rem;
+			transition: all .3s ease;
+
+			&:hover {
+				border-color: $color-brand;
+				color: $color-brand;
+
+			}
 		}
 	}
 }
