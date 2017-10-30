@@ -26,12 +26,14 @@
 
 // Components
 @import 'topbar';
+@import 'bottombar';
 @import 'nav';
 @import 'button';
 @import 'hero';
 
 //sections 
 @import 'content';
+@import 'footer';
 
 // Helpers
 @import 'aligner';

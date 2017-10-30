@@ -29,7 +29,6 @@ $font-lightItalic: join(RobotoCondensed-LightItalic, $font-stack);
 h1,h2,h3,
 h4,h5,h6 {
 	font-family: $font-light; 
-	font-size: $size-Lg;
 	letter-spacing: 5px; 
 	text-transform: uppercase; 
 	
@@ -42,6 +41,15 @@ h4,h5,h6 {
 	&.cursive {
 		font-family: $font-boldItalic;
 	}
+}
+
+h1 {
+	font-size: $size-Lg;
+}
+
+h2, h3, h4,
+h5, h6 {
+	font-size: $size-Md;	
 }
 
 // Paragraph

@@ -6,12 +6,12 @@
 .nav {
 	list-style-type: none;
 
-	li {
-		display: inline-block; 
-		margin-right: 1em;
-	}
-
 	&.nav--top {
+		.nav__item {
+			display: inline-block; 
+			margin-right: 1em;
+		}
+
 		.nav__link {
 			font-family: $font-regular; 
 			color: $color-white;
@@ -19,6 +19,17 @@
 	}
 
 	&.nav--finalists {
+		display: flex; 
+		flex-wrap: wrap;
+		align-items: center; 
+		align-content: stretch;
+		justify-content: space-evenly; 
+
+		.nav__item {
+			margin: 1em;
+		}
+
+
 		text-align: center; 
 		border-bottom: 1px solid rgba($color-text, 0.5);
 

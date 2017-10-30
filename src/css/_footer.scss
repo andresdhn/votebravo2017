@@ -1,0 +1,19 @@
+
+// --------------------------------------------------------------
+// Footer
+// --------------------------------------------------------------
+
+#footer {
+	.footer__content{
+		margin: 3rem 0;
+	}
+
+	.footer__contentRow {
+		padding: 2rem 0;
+		text-align: center;
+		
+		&:first-child{
+			border-bottom: 1px solid rgba($color-text, 0.5); 
+		}
+	}
+}

@@ -1,0 +1,12 @@
+
+// --------------------------------------------------------------
+// Topbar
+// --------------------------------------------------------------
+
+#bottombar {
+    position: relative; 
+    height: 4.5rem;
+    z-index: $zindex-topbar; 
+    
+   	background-color: $color-bg; 
+}
