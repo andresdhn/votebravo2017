@@ -7,6 +7,7 @@
 var gulp 			= require('gulp'), 
 	gulpif 			= require('gulp-if'), 
 	sass			= require('gulp-sass'), 
+	uglify			= require('gulp-uglify'), 
 	sourceMaps		= require('gulp-sourcemaps'),
     autoPrefixer 	= require('gulp-autoprefixer');
 
@@ -24,7 +25,9 @@ var input = {
 	html: inputRoot + '/html/pages/*.html',
 	sass: inputRoot + '/**/*.scss', 
 	copy: inputRoot + '/**/*.{png,jpg,gif}', 
-	vend: './vendor/**/*.*'
+	vend: './vendor/**/*.*',
+	js: inputRoot + '/**/*.js'
+
 }
 
 var output = {
@@ -43,6 +46,7 @@ gulp.task('html', function() {
 		.src(input.html)
 		.pipe( 
 			panini({
+				data: inputRoot + '/html/data',
 	    		root: inputRoot + '/html/pages',
 		    	layouts: inputRoot + '/html/layouts',
 		    	partials: inputRoot + '/html/partials'
@@ -75,6 +79,34 @@ gulp.task('sass', function() {
 		.pipe( 
 			gulp.dest( output.build ) 
 		); 
+}); 
+
+// --------------------------------------------------------------
+// JavaScript
+// --------------------------------------------------------------
+
+gulp.task('js', function () {
+	return gulp
+		.src (input.js)
+		.pipe(
+			webpack({
+				entry: {
+					main: './src/js/app.js'
+				},
+				module: {
+				  	loaders: [
+				    	{ test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] }
+				  	]
+				},
+				output: {
+			        filename: 'app.js'
+			    }
+			})
+		)
+		.pipe(
+			gulpif(isProduction, uglify())
+		)
+		.pipe(gulp.dest(output.build + '/js/')); 
 }); 
 
 // --------------------------------------------------------------
@@ -112,5 +144,7 @@ gulp.task('default', ['sass', 'html', 'copy', 'vendor']);
 gulp.task('watch', function () {
 	gulp.watch(input.sass , ['sass']); 
 	gulp.watch(input.copy , ['copy']); 
-	gulp.watch([inputRoot + '/html/{layouts,partials,pages}/**/*'] , [panini.refresh]); 
+	gulp.watch(input.js , ['js']); 
+
+	gulp.watch([inputRoot + '/html/{layouts,partials,data,pages}/**/*'] , [panini.refresh]); 
 }); 

@@ -6,7 +6,7 @@
 .btn {
 	display: inline-block; 
 	margin: 0;
-	padding: .5rem .5rem .5rem 1rem;
+	padding: .7rem .7rem .7rem 1rem;
 
 	color: $color-white; 
 	font-family: $font-bold;
@@ -17,6 +17,7 @@
 	&.btn--round {
 		border-radius: 500px; 
 		text-align: left;
+		letter-spacing: 3px;
 	}
 
 	&.btn--block {

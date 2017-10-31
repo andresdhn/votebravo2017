@@ -13,8 +13,17 @@
 }
 
 .finalist {
-	margin-bottom: 2rem; 
-	
+	position: relative; 
+	display: inline-block; 
+	transition: all .3s ease-in; 
+
+	@include media ('>sm'){
+		&:hover {
+			box-shadow: 10px 5px 20px 0px rgba($color-black, 0.2);
+			transform: translateY(-0.5%);
+		}
+	}
+
 	.finalist__thumb {
 		margin-bottom: 1rem;
 	}

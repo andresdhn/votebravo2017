@@ -5,7 +5,7 @@
 
 #topbar {
     position: relative; 
-    height: 4.5rem;
+    height: 5rem;
     width: 100%;
     z-index: $zindex-topbar; 
     
@@ -19,10 +19,11 @@
 	
 	.logo {
 		display: inline-block;
-		width: 80px; 
-		height: 34px; 
+		width: 83px; 
+		height: 40px; 
 		margin-right: 1em; 
 		background: url('../img/bravo_logo_white_sm.png') no-repeat left center; 
+		background-size: cover;
 	}
 
 	.nav {
