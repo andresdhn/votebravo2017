@@ -1,3 +1,8 @@
+
+// --------------------------------------------------------------
+// Item component
+// --------------------------------------------------------------
+
 var React = require('react'); 
 var CreateReactClass = require('create-react-class');
 
@@ -31,7 +36,7 @@ module.exports = Item = CreateReactClass({
 
 	render(){
 		return (
-			<div className="grid-cell zoomIn">
+			<div className="grid-cell zoomInUp">
 				<a className="finalist" data-media={ this.props.details.media } onClick={ this.playMedia( this.props.details.media, this.props.details.type  ) }>
 					<img className="finalist__thumb" src={ this.props.details.thumb }/>
 					<p className="finalist__title">{ this.props.details.title }</p>

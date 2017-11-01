@@ -1,28 +1,26 @@
 <div id="form">
-	<div class="container">
-		<div class="grid grid--justify-center grid--1-1 grid--1-2@xs">
-			<div class="grid-cell gid-cell--centered">
-				<form action="https://formspree.io/hernandez.andres.d@gmail.com" method="POST">
-					<input type="hidden" name="_cc" value="andres.hernandez@ward6.com.au" />
-					<input type="hidden" name="_subject" value="New votebravo.com.au submission!" />
-					<input type="text" name="_gotcha" style="display:none" />
-					<label for="finalist">Pick the one:</label>
-					<div class="dropdown">
-						<select name="finalist">
-							<option value="" selected>Select...</option>
-							{{#each finalists}}
-							<option value="{{ this.agency }} - {{ this.title }}">{{ this.agency }} - {{ this.title }}</option>
-							{{/each}}
-						</select>
-					</div>
+	<div class="grid grid--justify-center grid--1-1 grid--1-2@xs">
+		<div class="grid-cell gid-cell--centered">
+			<form action="https://formspree.io/hernandez.andres.d@gmail.com" method="POST">
+				<input type="hidden" name="_cc" value="andres.hernandez@ward6.com.au" />
+				<input type="hidden" name="_subject" value="New votebravo.com.au submission!" />
+				<input type="text" name="_gotcha" style="display:none" />
+				<label for="finalist">Pick the one:</label>
+				<div class="dropdown">
+					<select name="finalist">
+						<option value="" selected>Select...</option>
+						{{#each finalists}}
+						<option value="{{ this.agency }} - {{ this.title }}">{{ this.agency }} - {{ this.title }}</option>
+						{{/each}}
+					</select>
+				</div>
 
-					<label for="_replyto">Your email:</label>
-			    	<input type="email" name="_replyto" placeholder="Please enter our email" required>
-			    	<div class="text--center">
-			    		<button class="btn btn--round btn--arrow">VOTE</button>
-			    	</div>
-				</form>
-			</div>
+				<label for="_replyto">Your email:</label>
+		    	<input type="email" name="_replyto" placeholder="Please enter our email" required>
+		    	<div class="text--center">
+		    		<button class="btn btn--round btn--arrow">VOTE</button>
+		    	</div>
+			</form>
 		</div>
 	</div>
 </div>

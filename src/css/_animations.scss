@@ -1,0 +1,40 @@
+
+// --------------------------------------------------------------
+// Animations
+// --------------------------------------------------------------
+
+@keyframes zoomInUp {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 10%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+.zoomInUp {
+	  animation-name: zoomInUp;
+	  animation-duration: 1s;
+	  animation-fill-mode: both;	
+}
+
+@keyframes fadeInDown {
+  	0% {
+  		opacity: 0;
+  		transform: translate3d(-50%, -100%, 0);
+  	}
+  	100% {
+  		opacity: 1;
+  		transform: translate3d(-50%, 20%, 0);
+
+  	}
+} 
+
+.fadeInDown {
+	animation-name: fadeInDown;
+	animation-duration: 1s;
+	animation-fill-mode: both;		
+}
+

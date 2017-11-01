@@ -12,3 +12,4 @@
 
 require('./index'); 
 require('./hero'); 
+require('./modal'); 

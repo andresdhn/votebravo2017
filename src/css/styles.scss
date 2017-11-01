@@ -30,6 +30,7 @@
 @import 'nav';
 @import 'form';
 @import 'button';
+@import 'modal';
 
 //sections 
 @import 'hero';
@@ -37,9 +38,11 @@
 @import 'footer';
 
 // Helpers
+@import 'animations';
 @import 'aligner';
 @import 'spacers'; 
 @import 'helpers'; 
+
 
 
 

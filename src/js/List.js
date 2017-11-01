@@ -1,3 +1,7 @@
+// --------------------------------------------------------------
+// List component
+// --------------------------------------------------------------
+
 var React = require('react'); 
 var CreateReactClass = require('create-react-class');
 
