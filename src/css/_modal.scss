@@ -4,7 +4,7 @@
 // --------------------------------------------------------------
 
 .modal {
-	position: fixed; 
+	position: absolute; 
 	visibility: hidden;
 
 	width: 100%; 
@@ -19,7 +19,7 @@
 	z-index: $zindex-modal; 
 
 	&.in {
-		// display: block; 
+		position: fixed;
 		visibility: visible;
 	}
 
