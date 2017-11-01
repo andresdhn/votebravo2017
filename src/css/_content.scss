@@ -16,6 +16,7 @@
 	position: relative; 
 	display: inline-block; 
 	transition: all .3s ease-in; 
+	cursor: pointer; 
 
 	@include media ('>sm'){
 		&:hover {

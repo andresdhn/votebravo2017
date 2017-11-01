@@ -25,11 +25,6 @@ body {
 	height: 100%; 
 	width: 100%;
 	// background-color: $color-bg;
-	font-size: 85%; 
-
-	@include media('>xs') { font-size: 95%; }
-	@include media('>sm') { font-size: 100%; }
-
 }
 
 .container {
