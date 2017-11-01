@@ -135,7 +135,7 @@ gulp.task('vendor', function() {
 // Default
 // --------------------------------------------------------------
 
-gulp.task('default', ['sass', 'html', 'copy', 'vendor']); 
+gulp.task('default', ['sass', 'html', 'js', 'copy', 'vendor']); 
 
 // --------------------------------------------------------------
 // Watch
