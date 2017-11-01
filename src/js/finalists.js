@@ -15,10 +15,14 @@ module.exports = Finalists = CreateReactClass({
 		this.getAll(); 
 	},
 
-	filterList(event) {
+	filterList(agency) {
 		return function() {
 			var updatedList = this.state.initialItems;
-			updatedList = updatedList.filter( item => event == item.agency );
+			
+			if (agency !== 'All'){
+				updatedList = updatedList.filter( item => agency == item.agency );
+			}
+
 			this.setState({ items: updatedList });	
 		}.bind(this);
 	},
@@ -38,7 +42,7 @@ module.exports = Finalists = CreateReactClass({
 	},
 
 	render(){
-		var agencies = [...new Set(this.state.initialItems.map(item => item.agency))];
+		var agencies = ['All', ...new Set(this.state.initialItems.map(item => item.agency))];
 		
 		return (
 			<div>
