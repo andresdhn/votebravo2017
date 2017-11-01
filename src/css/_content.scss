@@ -15,7 +15,7 @@
 .finalist {
 	position: relative; 
 	display: inline-block; 
-	transition: all .3s ease-in; 
+	transition: all .1s ease-in; 
 	cursor: pointer; 
 
 	@include media ('>sm'){
@@ -39,3 +39,21 @@
 		text-transform: uppercase; 
 	}
 }
+
+.zoomIn {
+	  animation-name: zoomIn;
+	  animation-duration: 1s;
+	  animation-fill-mode: both;	
+}
+  
+
+@keyframes zoomIn {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, 10%, 0);
+	}
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+} 

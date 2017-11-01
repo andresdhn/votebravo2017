@@ -27,19 +27,33 @@ $ratio-full:	100%;
 	background-image: url('../img/hero_bg_retina.jpg'); 
 
 
-	video {
+	.hero__video,
+	.hero__image { 
 	    bottom: 0;
 	    height: 100%;
 	    position: absolute;
 	    right: 0;
 	    top: 0;
-	    width: auto;
+	    
 	    z-index: 0;
+	}
 
+	.hero__video{
+		width: auto;
+		
 	    &::-webkit-media-controls-start-playback-button {
 	        display: none !important;
 	        -webkit-appearance: none;
 	    }
+	}
+
+	.hero__image {
+		width: 100%; 
+
+		background-repeat: no-repeat; 
+		background-position: bottom center; 
+		background-size: cover; 
+
 	}
 }
 

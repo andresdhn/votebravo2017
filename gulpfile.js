@@ -146,5 +146,5 @@ gulp.task('watch', function () {
 	gulp.watch(input.copy , ['copy']); 
 	gulp.watch(input.js , ['js']); 
 
-	gulp.watch([inputRoot + '/html/{layouts,partials,data,pages}/**/*'] , [panini.refresh]); 
+	gulp.watch([inputRoot + '/html/{layouts,partials,pages}/**/*'] , [panini.refresh]); 
 }); 

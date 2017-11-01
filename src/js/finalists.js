@@ -22,7 +22,7 @@ module.exports = Finalists = CreateReactClass({
 			if (agency !== 'All'){
 				updatedList = updatedList.filter( item => agency == item.agency );
 			}
-
+			
 			this.setState({ items: updatedList });	
 		}.bind(this);
 	},

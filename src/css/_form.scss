@@ -1,0 +1,54 @@
+
+// --------------------------------------------------------------
+// Form
+// --------------------------------------------------------------
+
+input,
+textarea,
+select,
+label {
+    font-size: $size-Md;
+}
+
+input,
+textarea,
+select {
+	display: inline-block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 10px 0;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+    resize: none;
+    -webkit-appearance: none;
+    background: darken($color-white, 5%);
+    
+    &:hover, 
+    &:active, 
+    &:focus {
+	    outline: 0;
+	}
+}
+
+label {
+	margin-bottom: 0.5rem; 
+	font-size: $base-font-size; 
+}
+
+.dropdown {
+	position: relative; 
+
+	&:after {
+		content: ''; 
+		position: absolute;	
+		top: 45%; 
+		right: 3%;
+		transform: translateY(-50%); 
+		height: 5px; 
+
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid $color-black;
+	}
+}
