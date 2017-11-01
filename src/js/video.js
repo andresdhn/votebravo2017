@@ -10,3 +10,10 @@ heroVideo.addEventListener('ended', function () {
 	this.classList.add('hidden');
 	heroContent.classList.remove('hidden');
 });
+
+var scrollTo = require('./animatedScrollTo'); 
+
+heroVideo.addEventListener('play', function () {
+	console.log('...'); 
+	scrollTo(document.documentElement, 0, 1250)
+}, false);
