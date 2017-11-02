@@ -18,7 +18,15 @@ $ratio-full:	100%;
 	position: relative; 
 	width: 100%; 
 	height: auto; 
-	padding-bottom: $ratio-16by9; 
+	padding-bottom: $ratio-full; 
+	
+	@include media ('>xs'){	
+		padding-bottom: $ratio-4by3;
+	}
+
+	@include media ('>sm'){
+		padding-bottom: $ratio-16by9; 
+	}
 
 	background-color: $color-bg;
 	background-repeat: no-repeat; 

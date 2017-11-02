@@ -13,5 +13,6 @@ heroVideo.addEventListener('ended', function () {
 });
 
 heroVideo.addEventListener('play', function () {
+	scrollTo(document.body, 0, 1250)
 	scrollTo(document.documentElement, 0, 1250)
 }, false);

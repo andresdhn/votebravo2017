@@ -16,14 +16,17 @@ select {
 	display: inline-block;
     width: 100%;
     margin-bottom: 1rem;
-    padding: 10px 0;
+    padding: 10px;
 
     border: 1px solid transparent;
     border-radius: 5px;
     resize: none;
-    -webkit-appearance: none;
-    background: darken($color-white, 5%);
     
+    background: darken($color-white, 5%);
+
+    box-sizing: border-box;
+    appearance: none;
+
     &:hover, 
     &:active, 
     &:focus {

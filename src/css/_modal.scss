@@ -32,17 +32,18 @@
 
 .modal__dialog {
 	position: absolute; 
-	top: 20%;
-	left: 50%; 
+	top: 0;
+	left: 0; 
 	width: 80%; 
 	height: auto; 
-	max-width: $container-width; 
+	max-width: 768px; 
 	padding: 3rem; 
 	background-color: $color-white;
 }
 
 .modal.in {
 	.modal__dialog{
+		left: 50%;
 		animation-name: fadeInDown;
 		animation-duration: 1s;
 		animation-fill-mode: both;		

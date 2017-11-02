@@ -64,6 +64,22 @@ module.exports = [
 		"type": "video"
 	},
 	{
+		"id": "saatchi_blown_out_of_action",
+		"agency": "Saatchi & Saatchi Wellness", 
+		"title": "Blown out of action", 
+		"thumb": "media/saatchi_blown_out_of_action_thumb.jpg", 
+		"media": "media/saatchi_blown_out_of_action.mp4", 
+		"type": "video"
+	},
+	{
+		"id": "saatchi_protected_wallet",
+		"agency": "Saatchi & Saatchi Wellness", 
+		"title": "Protected Wallet", 
+		"thumb": "media/saatchi_protected_wallet_thumb.jpg", 
+		"media": "media/saatchi_protected_wallet.jpg", 
+		"type": "image"
+	},
+	{
 		"id": "ward6_abandon_the_fan",
 		"agency": "Ward6", 
 		"title": "Abandon the Fan", 

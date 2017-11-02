@@ -1,11 +1,21 @@
 <div id="form">
-	<div class="grid grid--justify-center grid--1-1 grid--1-2@xs">
+	<div class="grid grid--justify-center grid--1-1 grid--3-4@xs grid--1-2@md">
 		<div class="grid-cell gid-cell--centered">
 			<form action="https://formspree.io/hernandez.andres.d@gmail.com" method="POST">
 				<input type="hidden" name="_cc" value="andres.hernandez@ward6.com.au" />
 				<input type="hidden" name="_subject" value="New votebravo.com.au submission!" />
 				<input type="text" name="_gotcha" style="display:none" />
-				<label for="finalist">Pick the one:</label>
+				
+				<label for="_replyto">Your Name:</label>
+		    	<input type="text" name="name" placeholder="John Snow" required>
+
+		    	<label for="_replyto">Company:</label>
+		    	<input type="text" name="company" placeholder="The Night Watch" required>
+
+				<!-- <label for="_replyto">Your email:</label>
+		    	<input type="email" name="_replyto" placeholder="John@threeeyedraven.com.au" required> -->
+
+		    	<label for="finalist">Your pick:</label>
 				<div class="dropdown">
 					<select name="finalist">
 						<option value="" selected>Select...</option>
@@ -15,9 +25,7 @@
 					</select>
 				</div>
 
-				<label for="_replyto">Your email:</label>
-		    	<input type="email" name="_replyto" placeholder="Please enter our email" required>
-		    	<div class="text--center">
+		    	<div class="text--center margin--TX2">
 		    		<button class="btn btn--round btn--arrow">VOTE</button>
 		    	</div>
 			</form>
