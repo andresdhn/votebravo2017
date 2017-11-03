@@ -6,7 +6,7 @@
 var React = require('react'); 
 var CreateReactClass = require('create-react-class');
 
-module.exports = Item = CreateReactClass({
+var Item = CreateReactClass({
 	playMedia( media, type ) {
 		return function() {
 			var hero = document.getElementById('hero');
@@ -46,3 +46,5 @@ module.exports = Item = CreateReactClass({
 		)  
 	}
 });
+
+module.exports = Item; 

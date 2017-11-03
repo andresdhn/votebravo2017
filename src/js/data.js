@@ -1,5 +1,13 @@
 module.exports = [	
 	{
+		"id": "sudler_living_nightmare",
+		"agency": "Greyhealth Group/Sudler", 
+		"title": "Living Nightmare: In Their Shoes", 
+		"thumb": "media/sudler_living_nightmare_thumb.jpg", 
+		"media": "media/sudler_living_nightmare.mp4", 
+		"type": "video"
+	},
+	{
 		"id": "mccann_poo_romance",
 		"agency": "McCann Health", 
 		"title": "Poo Romance", 
@@ -32,35 +40,11 @@ module.exports = [
 		"type": "video"
 	},
 	{
-		"id": "orchard_spread_the_cure",
-		"agency": "Orchard", 
-		"title": "Spread the Cure- Hepatitis C Awareness", 
-		"thumb": "media/orchard_spread_the_cure_thumb.jpg", 
-		"media": "media/orchard_spread_the_cure.mp4", 
-		"type": "video"
-	},
-	{
 		"id": "orchard_wish_granted",
 		"agency": "Orchard", 
 		"title": "Wish Granted", 
 		"thumb": "media/orchard_wish_granted_thumb.jpg", 
 		"media": "media/orchard_wish_granted.mp4", 
-		"type": "video"
-	},
-	{
-		"id": "showpony_waiting_is_not_an_emergency",
-		"agency": "ShowPony", 
-		"title": "Waiting is not an emergency", 
-		"thumb": "media/showpony_waiting_is_not_an_emergency_thumb.jpg", 
-		"media": "media/showpony_waiting_is_not_an_emergency.mp4", 
-		"type": "video"
-	},
-	{
-		"id": "sudler_living_nightmare",
-		"agency": "Greyhealthgroup/Sudler Sydney", 
-		"title": "Living Nightmare: In Their Shoes", 
-		"thumb": "media/sudler_living_nightmare_thumb.jpg", 
-		"media": "media/sudler_living_nightmare.mp4", 
 		"type": "video"
 	},
 	{
@@ -78,6 +62,14 @@ module.exports = [
 		"thumb": "media/saatchi_protected_wallet_thumb.jpg", 
 		"media": "media/saatchi_protected_wallet.jpg", 
 		"type": "image"
+	},
+	{
+		"id": "showpony_waiting_is_not_an_emergency",
+		"agency": "ShowPony", 
+		"title": "Waiting is not an emergency", 
+		"thumb": "media/showpony_waiting_is_not_an_emergency_thumb.jpg", 
+		"media": "media/showpony_waiting_is_not_an_emergency.mp4", 
+		"type": "video"
 	},
 	{
 		"id": "ward6_abandon_the_fan",

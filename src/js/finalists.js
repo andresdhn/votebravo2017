@@ -1,9 +1,9 @@
+
 var React = require('react'); 
 var CreateReactClass = require('create-react-class');
 var List = require('./List'); 
 
-
-module.exports = Finalists = CreateReactClass({
+var Finalists = CreateReactClass({
 	getInitialState(){
 		return {
 			initialItems: require('./data'),
@@ -54,3 +54,5 @@ module.exports = Finalists = CreateReactClass({
 		);
 	}
 });
+
+module.exports = Finalists;

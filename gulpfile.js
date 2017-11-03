@@ -75,7 +75,7 @@ gulp.task('sass', function() {
 				gulpif( isProduction, sassOptions ) 
 			).on('error', sass.logError)
 		)
-		.pipe(autoPrefixer())
+		.pipe(autoPrefixer( { browsers: '> 0%' } ))
 		.pipe( 
 			gulp.dest( output.build ) 
 		); 
@@ -91,7 +91,7 @@ gulp.task('js', function () {
 		.pipe(
 			webpack({
 				entry: {
-					main: './src/js/app.js'
+					main: ['babel-polyfill', './src/js/app.js']
 				},
 				module: {
 				  	loaders: [

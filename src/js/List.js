@@ -4,10 +4,9 @@
 
 var React = require('react'); 
 var CreateReactClass = require('create-react-class');
-
 var Item = require('./Item'); 
 
-module.exports = List = CreateReactClass({
+var List = CreateReactClass({
 	render(){
 		return (
 			<div className="grid grid--gutters grid--1-1 grid--1-2@xs grid--1-3@sm">
@@ -18,3 +17,5 @@ module.exports = List = CreateReactClass({
 		)  
 	}
 });
+
+module.exports = List;

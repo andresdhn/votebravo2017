@@ -12,6 +12,10 @@
 	}
 }
 
+#finalists-container {
+	min-height: 326px;	
+}
+
 .finalist {
 	position: relative; 
 	display: inline-block; 
@@ -40,3 +44,4 @@
 		text-transform: uppercase; 
 	}
 }
+
