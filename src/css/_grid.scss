@@ -10,6 +10,6 @@ $im-grid-cell-class: 'grid-cell';
 // Setting gutters
 // $im-grid-gutter-size: 20px;
 // Optionally include max-width to fix IE issues
-$im-grid-include-max-width: false !default;
+$im-grid-include-max-width: true;
 // Generating grid classes for 1, 2 and 3 column layouts
 @include im-grid-columns(1, 2, 3, 4, 5, 6);
