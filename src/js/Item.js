@@ -5,8 +5,14 @@
 
 var React = require('react'); 
 var CreateReactClass = require('create-react-class');
+var scrollTo = require('./animatedScrollTo');
 
 var Item = CreateReactClass({
+	scrollTop() {
+		scrollTo(document.body, 0, 1250);
+		scrollTo(document.documentElement, 0, 1250);
+	}, 
+
 	playMedia( media, type ) {
 		return function() {
 			var hero = document.getElementById('hero');
@@ -30,6 +36,8 @@ var Item = CreateReactClass({
 					heroImage.classList.remove('hidden');
 					break;
 			}
+
+			this.scrollTop(); 
 
 		}.bind(this); 
 	}, 
