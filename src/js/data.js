@@ -40,14 +40,6 @@ module.exports = [
 		"type": "video"
 	},
 	{
-		"id": "orchard_wish_granted",
-		"agency": "Orchard", 
-		"title": "Wish Granted", 
-		"thumb": "media/orchard_wish_granted_thumb.jpg", 
-		"media": "media/orchard_wish_granted.mp4", 
-		"type": "video"
-	},
-	{
 		"id": "saatchi_blown_out_of_action",
 		"agency": "Saatchi & Saatchi Wellness", 
 		"title": "Blown out of action", 

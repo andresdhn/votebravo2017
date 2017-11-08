@@ -13,7 +13,8 @@ var gulp 			= require('gulp'),
 
 var panini 			= require('panini'),
 	args    		= require('yargs').argv,
-	webpack 		= require('webpack-stream');
+	webpack 		= require('webpack-stream'),
+	UglifyJSPlugin 	= require('uglifyjs-webpack-plugin');
 
 // --------------------------------------------------------------
 // Config
@@ -98,13 +99,17 @@ gulp.task('js', function () {
 				    	{ test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] }
 				  	]
 				},
+				plugins: gulpif(
+					isProduction, [ 
+				    	new UglifyJSPlugin({ 
+				    		 uglifyOptions: { comments: false }
+				    	})
+					]
+				),
 				output: {
 			        filename: 'app.js'
 			    }
 			})
-		)
-		.pipe(
-			gulpif(isProduction, uglify())
 		)
 		.pipe(gulp.dest(output.build + '/js/')); 
 }); 
