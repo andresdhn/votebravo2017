@@ -25,7 +25,7 @@ var inputRoot = './src';
 var input = {
 	html: inputRoot + '/html/pages/*.html',
 	sass: inputRoot + '/**/*.scss', 
-	copy: inputRoot + '/**/*.{png,jpg,gif}', 
+	copy: inputRoot + '/**/*.{png,jpg,gif,ico,ttf,mp4,mp3}', 
 	vend: './vendor/**/*.*',
 	js: inputRoot + '/**/*.js'
 

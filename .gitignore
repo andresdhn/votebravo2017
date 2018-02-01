@@ -62,6 +62,7 @@ login.md
 #############
 node_modules
 bower_components
+vendor
 
 # Distribution #
 #############
