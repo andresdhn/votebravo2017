@@ -1,7 +1,7 @@
 {
   "name": "votebravo",
   "version": "1.0.0",
-  "description": "Microsite for Bravo awards 2017 ",
+  "description": "Microsite for Bravo awards 2017",
   "main": "index.js",
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --content-base build",

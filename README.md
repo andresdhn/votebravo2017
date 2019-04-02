@@ -1,34 +1,14 @@
-#votebravo
-------
+# votebravo
+---
 Bravo Awards 2017 vote website
 
 
-#Introduction
-------
+## Introduction
+
 Microsite to capture votes for Bravo awards 2017 finalists. Relies on https://formspree.io/ API for sending the votes to a preconfigured email account. 
 
 
-#Links
-------
-## Live: 
-http://votebravo.com.au/
-
-## Staging: 
-http://w6digital.com.au/clients/bravo/votebravo/
-
-
-#Get ready
-------
-Latest version of Node.js is required to edit this code: 
-
-https://nodejs.org/en/
-
-## Clone repository:
-```
-$ git clone git@bitbucket.org:andresh83/votebravo.git
-```
-
-## Install dependencies: 
+## Dependencies: 
 ```
 $ npm install
 ```
@@ -48,8 +28,5 @@ Distribution build (minimized code):
 $ gulp --env prod
 ```
 
-#Author
-------
+# Author
 [Andres Hernandez](andres.hernandez@ward6.com.au)
-
-Ward6 PTY LTD, 2017 All rights reserved
